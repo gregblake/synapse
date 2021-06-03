@@ -50,7 +50,7 @@ server {
 
     server_name matrix.example.com;
 
-    location ~* ^(\/_matrix|\/_synapse\/client) {
+    location ~* ^(\/_matrix|\/_synapse|\/client) {
         proxy_pass http://localhost:8008;
         proxy_set_header X-Forwarded-For $remote_addr;
         proxy_set_header X-Forwarded-Proto $scheme;
